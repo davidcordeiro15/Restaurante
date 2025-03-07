@@ -5,7 +5,7 @@ public class Restaurante {
 
     private List<Prato> pratos = new ArrayList<>(); 
     private List<Pedido> pedidos = new ArrayList<>(); 
-
+    private float totalPedido;
     public List<Prato> getPratos(){
         return pratos; 
     }
@@ -16,7 +16,7 @@ public class Restaurante {
           
     public void adicionarPratos(Prato prato){
         pratos.add(prato); 
-        System.out.println("Prato adicionado: "+ prato);
+        ;
     }
 
     public void removePratos(Prato prato){
@@ -24,8 +24,22 @@ public class Restaurante {
         System.out.println("Prato removido: "+ prato);
     }
 
+    
     public void novoPedido(Pedido pedido){
         pedidos.add(pedido);
-        System.out.println("Pedido adicionado: "+pedidos); // Fazer a lista apresentar 
+        System.out.println("Pedido adicionado: "+ pedido);  
     }
+
+   
+    public Float calculaPedido(Pedido pedido){
+        List<Prato> listaPedido = new ArrayList<>(); 
+        listaPedido = pedido.getListaDePratos(); 
+         
+        for(int i = 0; i < listaPedido.size(); i++){
+            totalPedido += listaPedido.get(i).getPreco();
+        }
+        return totalPedido; 
+    }
+
+    
 }

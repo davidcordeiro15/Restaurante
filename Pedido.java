@@ -1,12 +1,17 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pedido{
     private int numeroPedido;
     private String cliente;
-    private List<String> listaDePratos;
+    private List<Prato> listaDePratos;
     public int getNumeroPedido() {
         return numeroPedido;
     }
+    public Pedido() {
+        this.listaDePratos = new ArrayList<>();
+    }
+
     public void setNumeroPedido(int numeroPedido) {
         this.numeroPedido = numeroPedido;
     }
@@ -16,10 +21,10 @@ public class Pedido{
     public void setCliente(String cliente) {
         this.cliente = cliente;
     }
-    public List<String> getListaDePratos() {
+    public List<Prato> getListaDePratos() {
         return listaDePratos;
     }
-    public void setListaDePratos(List<String> listaDePratos) {
+    public void setListaDePratos(List<Prato> listaDePratos) {
         this.listaDePratos = listaDePratos;
     }
     @Override
