@@ -1,3 +1,4 @@
+package com.restaurante;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,19 +11,13 @@ public class SistemaRestaurante {
         Prato prato;
         Restaurante restaurante = new Restaurante();
         System.out.println("""
-                ********************************************
-                    Bem vindo ao Restaurante Viva Verde!
-                ********************************************
-                """);
+            ********************************************
+                  Bem vindo ao Restaurante Viva Verde!
+            ********************************************
+            """);
         while (escolha != 3) {
-            System.out.println("""
- 
-                    O que deseja fazer?
-                    1 - Fazer um pedido
-                    2 - Remover algum prato do pedido
-                    3 - Pedir a conta
-                    4 - Ver o pedido
-                    """);
+           
+            System.out.println("O que deseja fazer?\n1 - Fazer um pedido\n2 - Remover algum prato do pedido\n3 - Pedir a conta\n4 - Ver o pedido");
             escolha = scanner.nextInt();
             scanner.nextLine();
 
